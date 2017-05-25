@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" ng-app="fbOAuth">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>fb OAuth</title>
+
+    <!-- Angular -->
+    <script src="angular.min.js"></script>
+
+    <!-- App specific -->
+    <script src="app.js"></script>
+
+      
+  </head>
+  <body ng-controller="StartCtrl">
+    <button ng-click="login()">Log in</button>
+    {{ name }}, {{ location.name }}
+
+    <button ng-click="getWeather()">Get weather</button>
+  </body>
+</html>

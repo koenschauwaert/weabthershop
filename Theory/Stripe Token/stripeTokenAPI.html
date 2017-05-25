@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js">
+</script> 
+<script>
+
+sampleApp.controller('MainController', function($scope, $http){
+	var getToken = function(sucessCb){
+		var request = {
+			method: 'POST',
+			url: 'https://api.stripe.com/v1/tokens',
+			header: {
+				'Content-Type': 'application/x-www-form-rulencoded',
+				'Authorization': 'Bearer sk_test_sk_test_qxS1DgyfYwk5zVLBomf4V2I6'
+			},
+			data: 'card[number]=4242424242424242&card[exp_month]=12&card[exp_year]=2018&card[cvc]=123'
+		};
+		var errCb = function(err){
+			alert("Wrong " + JSON.stringify(err));
+		};
+		$http(request).then(function(data) { successCb(data["data"]["id"]);
+	}, errCb).catch(errCb);
+	};
+
+	$scope.subscribe = function(){
+		getToken(function(token){
+
+		})
+	}
+})
+
+</script>
+
+</head>
+<body>
+	
+
+
+</body>
+<footer>
+	
+</footer>
