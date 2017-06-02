@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cloud API's Koen Schauwaert</title>
+
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+
+    <!-- App specific -->
+    <script src="app.js"></script>
+
+  </head>
+  <body>
+    <main ng-controller="LocationController">
+      <button ng-click="login()">PLEASE LOGIN FIRST</button> <br>
+      Welcome {{ name }}! <br>
+      <br>
+      <b>CURRENT LOCATION:</b> <br>
+      {{ location.name }}! <br> 
+      <br>
+      <b>CURRENT WEATHER INFO:</b> <br>
+      Temperature: {{ tempCentigrade }}&deg;C <br>
+      Humidigy: {{ humidity }}% <br>
+      Wind: {{ wind }}m/s <br>
+      Clouds: {{ clouds }}% <br>
+      <br>
+      <b>IMAGE:</b> <br>
+      <img src="{{ firebaseImage }}" style="width:500px"> <br>
+      <i>Keyword Firebase: {{ keywordFirebase }}</i> <br>
+      <br>
+      <b>YOUTUBE:</b> <br>
+      <b>TITLE:</b> <br>
+      {{ title }} <br>
+      <br>
+      <b>DESCRIPTION:</b> <br>
+      {{ description }} <br>
+      <a href="https://www.youtube.com/watch?v={{watchId}}}" target="_blank">
+        <img src="{{ thumbnail }}" style="width:500px">
+      </a> <br>
+      <i>Keywords YouTube: {{ keywordYoutube }} + fail</i>;
+    </main>
+  </body>
+</html>
