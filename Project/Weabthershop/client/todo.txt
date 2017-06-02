@@ -1,6 +1,0 @@
-Weabthershop
-
-Facebook OAuth
-Firebase API met prijzen
-OpenWeather Map
-PayPal API
